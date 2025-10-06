@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Blog Section</title>
+    <style>
+        
+
+        .blog-container {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 20px 0;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+        }
+
+        .blog-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .blog-container::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .blog-container::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+        }
+
+        .blog-container::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .blog-card {
+            min-width: 350px;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .blog-content {
+            padding: 24px;
+        }
+
+        .blog-date {
+            color: #667eea;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .blog-title {
+            font-size: 1.5rem;
+            color: #2d3748;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .blog-excerpt {
+            color: #718096;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .blog-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #f7fafc;
+            color: #667eea;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .scroll-hint {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .blog-card {
+                min-width: 300px;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blog-section">
+    
+
+        <div class="blog-container">
+
+            <div class="blog-card">
+                <div class="blog-image">📱</div>
+                <div class="blog-content">
+                    <div class="blog-date">October 5, 2025</div>
+                    <h3 class="blog-title">Getting Started with Web Development</h3>
+                    <p class="blog-excerpt">Learn the fundamentals of modern web development and start building your
+                        first website today.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Development</span>
+                        <span class="tag">Tutorial</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-image">🎨</div>
+                <div class="blog-content">
+                    <div class="blog-date">October 3, 2025</div>
+                    <h3 class="blog-title">Design Principles for 2025</h3>
+                    <p class="blog-excerpt">Explore the latest design trends and principles that are shaping the digital
+                        landscape this year.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Design</span>
+                        <span class="tag">Trends</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-image">🚀</div>
+                <div class="blog-content">
+                    <div class="blog-date">October 1, 2025</div>
+                    <h3 class="blog-title">Building Scalable Applications</h3>
+                    <p class="blog-excerpt">Discover best practices for creating applications that can grow with your
+                        user base.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Architecture</span>
+                        <span class="tag">Performance</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-image">💡</div>
+                <div class="blog-content">
+                    <div class="blog-date">September 28, 2025</div>
+                    <h3 class="blog-title">Creative Problem Solving</h3>
+                    <p class="blog-excerpt">Learn techniques to approach challenges with innovative solutions and think
+                        outside the box.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Innovation</span>
+                        <span class="tag">Strategy</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-image">🔒</div>
+                <div class="blog-content">
+                    <div class="blog-date">September 25, 2025</div>
+                    <h3 class="blog-title">Security Best Practices</h3>
+                    <p class="blog-excerpt">Essential security measures every developer should implement to protect user
+                        data and applications.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Security</span>
+                        <span class="tag">Best Practices</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-image">⚡</div>
+                <div class="blog-content">
+                    <div class="blog-date">September 22, 2025</div>
+                    <h3 class="blog-title">Optimizing Performance</h3>
+                    <p class="blog-excerpt">Tips and tricks to make your website lightning fast and provide the best
+                        user experience.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Performance</span>
+                        <span class="tag">Optimization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

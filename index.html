@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VDM to the world</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="hamburger" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-logo">
+
+            <img src="images/logo.jpg" alt="" srcset="">
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="scrolling.html">Home</a></li>
+            <li><a href="photo.html">About</a></li>
+            <li><a href="index.html">Projects</a></li>
+            <li><a href="index.html">Contact</a></li>
+            <li><a href="index.html">Login/signup</a></li>
+        </ul>
+    </nav>
+
+
+    <style>
+        @media (max-width: 768px) {
+
+            .nav-logo {
+                display: flex;
+                align-items: center;
+                height: 40px;
+            }
+
+            .nav-logo img {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 2px solid #fff;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .navbar {
+                padding: 10px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+
+            .hamburger {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 25px;
+                width: 50%;
+            }
+
+
+            .hamburger span {
+                display: block;
+                height: 2px;
+                background: black;
+                width: 20%;
+            }
+
+            .nav-links {
+                list-style: none;
+                display: flex;
+                gap: 20px;
+                margin: 0;
+                padding: 0;
+            }
+
+            .nav-links li a {
+                text-decoration: none;
+                color: beige;
+                font-weight: 500;
+            }
+
+
+
+
+
+
+
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: black;
+                z-index: 1000;
+                flex-direction: column;
+                gap: 0;
+                display: none;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links li {
+                border-bottom: 1px solid #eee;
+                padding: 15px 20px;
+                margin-top: 1rem;
+                padding-bottom: 2rem;
+            }
+        }
+    </style>
+
+    <script>
+        const hamburger = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+
+
+
+    <header>
+        <h1 class="reveal-text">listening to your needs</h1>
+        <p class="reveal-text">Your voice in Nigeria</p>
+
+        <div class="header-button reveal-text">
+            <button>get involved</button>
+            <button>donate</button>
+        </div>
+
+
+        <div class="image-container">
+            <div class="scale-wrapper">
+                <img src="images/header-photo.jpg" alt="Mountain landscape" class="scale-image">
+            </div>
+        </div>
+
+    </header>
+
+
+    <!--  -->
+    <script src="javascript/main.js"></script>
+    <!--  -->
+
+    <script>
+        // Additional JavaScript to handle page load and scroll animations
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add a slight delay to ensure all elements are rendered
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 100);
+        });
+    </script>
+
+
+    <section class="who-we-are">
+
+        <h2 data-aos="zoom-in"> <span></span> what we stand for</h2>
+
+        <div class="who-we-are-top">
+
+            <h3 data-aos="fade-up" data-aos-duration="2000">Building a better tommorow for Nigerians</h3>
+
+            <p data-aos="fade-up" data-aos-duration="3000">Our activists work tirelessly to help individuals seek
+                justice, especially those who have been wronged or
+                deprived of their rights. Through advocacy and direct intervention, we have assisted many in recovering
+                their stolen goods and resolving disputes, ensuring their voices are heard and their needs are met.</p>
+
+        </div>
+
+        <div class="who-we-are-buttom">
+
+            <div class="who-we-are-buttom-first">
+                <img data-aos="fade-up" data-aos-duration="3000" src="images/img5.jpg" alt="" srcset="">
+
+                <img data-aos="fade-up" data-aos-duration="3000" src="images/img2.jpg" alt="" srcset="">
+            </div>
+
+            <div class="who-we-are-buttom-second">
+
+                <img data-aos="fade-right" data-aos-duration="1000" src="images/img1.jpg" alt="" srcset="">
+
+                <img data-aos="fade-left" data-aos-duration="1000" src="images/img3.jpg" alt="" srcset="">
+
+                <img data-aos="fade-right" data-aos-duration="2000" src="images/img4.jpg" alt="" srcset="">
+
+                <img data-aos="fade-left" data-aos-duration="2000" src="images/img6.jpg" alt="" srcset="">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="events">
+
+        <h4 data-aos="zoom-in"><span></span>events and gathering</h4>
+
+        <div class="events-heading" data-aos="fade-up" data-aos-duration="2000">
+
+            <p>get involved: <br> upcoming events</p>
+
+            <div class="blog-container">
+
+                <div class="blog-card">
+                    <div class="blog-image">📱</div>
+                    <div class="blog-content">
+                        <div class="blog-date">October 5, 2025</div>
+                        <h3 class="blog-title">Getting Started with Web Development</h3>
+                        <p class="blog-excerpt">Learn the fundamentals of modern web development and start building your
+                            first website today.</p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">🎨</div>
+                    <div class="blog-content">
+                        <div class="blog-date">October 3, 2025</div>
+                        <h3 class="blog-title">Design Principles for 2025</h3>
+                        <p class="blog-excerpt">Explore the latest design trends and principles that are shaping the
+                            digital
+                            landscape this year.</p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">🚀</div>
+                    <div class="blog-content">
+                        <div class="blog-date">October 1, 2025</div>
+                        <h3 class="blog-title">Building Scalable Applications</h3>
+                        <p class="blog-excerpt">Discover best practices for creating applications that can grow with
+                            your
+                            user base.</p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">💡</div>
+                    <div class="blog-content">
+                        <div class="blog-date">September 28, 2025</div>
+                        <h3 class="blog-title">Creative Problem Solving</h3>
+                        <p class="blog-excerpt">Learn techniques to approach challenges with innovative solutions and
+                            think
+                            outside the box.</p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">🔒</div>
+                    <div class="blog-content">
+                        <div class="blog-date">September 25, 2025</div>
+                        <h3 class="blog-title">Security Best Practices</h3>
+                        <p class="blog-excerpt">Essential security measures every developer should implement to protect
+                            user
+                            data and applications.</p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">⚡</div>
+                    <div class="blog-content">
+                        <div class="blog-date">September 22, 2025</div>
+                        <h3 class="blog-title">Optimizing Performance</h3>
+                        <p class="blog-excerpt">Tips and tricks to make your website lightning fast and provide the best
+                            user experience.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="contact">
+
+        <h5 data-aos="zoom-in"><span></span>lay your complaints</h5>
+
+
+        <form action="" enctype="multipart/form-data">
+
+            <div data-aos="fade-up" data-aos-duration="2000">
+                <label for="incident-title">Incident Title</label>
+                <select id="incident-title" name="incident-title" required>
+                    <option value="">Select incident type</option>
+                    <option value="theft">Theft</option>
+                    <option value="harassment">Harassment</option>
+                    <option value="discrimination">Discrimination</option>
+                    <option value="abuse">Abuse</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <label for="incident-location">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <label for="incident-location">Phone Number</label>
+                <input type="number" id="full-name" name="full-name" required>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <label for="incident-date">Date</label>
+                <input type="date" id="incident-date" name="incident-date" required>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <label for="incident-location">Location</label>
+                <input type="text" id="incident-location" name="incident-location" required>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <label for="incident-description">Description</label>
+                <textarea id="incident-description" name="incident-description" rows="4" required></textarea>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <label for="preferred-outcome">Preferred Outcome</label>
+                <input type="text" id="preferred-outcome" name="preferred-outcome" required>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="2000">
+                <label for="witness-contact">Witness Contact</label>
+                <input type="text" id="witness-contact" name="witness-contact" required>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="2000">
+                <label for="attachments">Attachments</label>
+                <input type="file" id="attachments" name="attachments" multiple required>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="2000">
+                <input type="checkbox" id="anonymity" name="anonymity" required>
+                <label for="anonymity">Submit anonymously</label>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="2000">
+                <input type="checkbox" id="consent-public" name="consent-public" required>
+                <label for="consent-public">I consent to public sharing of this incident</label>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="2000">
+                <label for="incident-description">How would you like to be contacted?</label>
+                <textarea id="incident-description" name="incident-description"
+                    placeholder="I would like to be contacted through my whatsapp. Phone number: 08123456789" rows="4"
+                    required></textarea>
+            </div>
+
+            <button data-aos="fade-up" data-aos-duration="1000" type="submit">Submit</button>
+        </form>
+
+    </section>
+
+    <footer>
+
+        <h6 data-aos="zoom-in"> VDM movement group ltd</h6>
+
+        <div data-aos="fade-up" data-aos-duration="1000">
+            <p>adresss</p>
+            <p>number 4 abuja road</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-duration="1000">
+            <p>contact</p>
+            <p>info@gmail.com</p>
+            <p>09291991919</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-duration="1000">
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener" aria-label="TikTok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+
+        <div>
+            <p>&copy; 2025 VDM Movement Group Ltd. All rights reserved.</p>
+        </div>
+
+
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+
+</body>
+
+</html>

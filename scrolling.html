@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth Scroll Effect</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Main scroll container */
+    #scroll-container {
+      width: 100%;
+      border: 2px solid red;
+    }
+
+    /* Header */
+    header {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+
+    /* Content sections */
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      border-bottom: 1px solid #333;
+    }
+
+    .content-box {
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .content-box h2 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .content-box p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #ccc;
+    }
+
+    /* Different section backgrounds */
+    section:nth-child(2) { background: #111; }
+    section:nth-child(3) { background: #0a0a0a; }
+    section:nth-child(4) { background: #111; }
+    section:nth-child(5) { background: #0a0a0a; }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.9rem;
+      color: #667eea;
+      animation: bounce 2s infinite;
+      z-index: 100;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <div id="scroll-container">
+    <header>
+      <h1>Smooth Scroll Experience</h1>
+    </header>
+
+    <section>
+      <div class="content-box">
+        <h2>Section One</h2>
+        <p>Notice how the scrolling feels slower and more controlled? This creates a premium, cinematic feel as you navigate through the page. The effect is achieved using JavaScript to interpolate between scroll positions.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="content-box">
+        <h2>Section Two</h2>
+        <p>This smooth scrolling technique is popular on modern portfolios, creative agency websites, and luxury brand sites. It helps draw attention to your content and creates a more immersive browsing experience.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="content-box">
+        <h2>Section Three</h2>
+        <p>You can adjust the "ease" value in the JavaScript to make scrolling faster or slower. Lower values (like 0.05) create a more dramatic, slow-motion effect, while higher values (like 0.15) feel snappier.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="content-box">
+        <h2>Section Four</h2>
+        <p>The smooth scroll effect works by using requestAnimationFrame to continuously update the scroll position, creating fluid motion that feels natural and engaging.</p>
+      </div>
+    </section>
+
+    <div class="scroll-indicator">↓ Scroll to explore ↓</div>
+  </div>
+
+  <script>
+    // Smooth scroll implementation
+    let currentScroll = 0;
+    let targetScroll = 0;
+    const ease = 0.05; // Adjust this value: 0.05 (slower) to 0.15 (faster)
+
+    // Update target scroll position when user scrolls
+    window.addEventListener('scroll', () => {
+      targetScroll = window.scrollY;
+    });
+
+    // Smooth scroll animation loop
+    function smoothScroll() {
+      // Interpolate between current and target scroll
+      currentScroll += (targetScroll - currentScroll) * ease;
+      
+      // Apply the scroll position to the container
+      const container = document.getElementById('scroll-container');
+      container.style.transform = `translateY(-${currentScroll}px)`;
+      
+      // Continue the animation loop
+      requestAnimationFrame(smoothScroll);
+    }
+
+    // Hide scroll indicator after first scroll
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        document.querySelector('.scroll-indicator').style.opacity = '0';
+      } else {
+        document.querySelector('.scroll-indicator').style.opacity = '1';
+      }
+    });
+
+    // Make body tall enough to scroll
+    document.body.style.height = document.getElementById('scroll-container').offsetHeight + 'px';
+
+    // Start the smooth scroll animation
+    smoothScroll();
+
+    // Update body height on window resize
+    window.addEventListener('resize', () => {
+      document.body.style.height = document.getElementById('scroll-container').offsetHeight + 'px';
+    });
+  </script>
+</body>
+</html>

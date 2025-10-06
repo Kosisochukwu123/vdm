@@ -1,0 +1,115 @@
+@media (max-width: 600px) {
+  .events {
+    height: 90vh;
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    padding: var(--primary-padding);
+    padding-top: 8rem;
+  }
+
+  .events h4 {
+    color: var(--background-color);
+    font-family: var(--text-font);
+    text-transform: uppercase;
+    font-size: var(--heading-font-size);
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+  }
+
+  .events h4 span {
+    background-color: beige;
+  }
+
+  .events-heading {
+    color: beige;
+    text-transform: capitalize;
+    font-size: var(--secondary-font-size);
+    margin-top: 1rem;
+    font-family: var(--header-font);
+  }
+
+  /* ------------------- */
+
+  .blog-container {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+  }
+
+  .blog-container::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .blog-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+
+  .blog-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+  }
+
+  .blog-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  .blog-card {
+    min-width: 350px;
+    background: white;
+    /* border-radius: 16px; */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+  }
+
+  .blog-content {
+    padding: 24px;
+  }
+
+  .blog-date {
+    color: #667eea;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .blog-title {
+    font-size: var(--heading-font-size);
+    color: #2d3748;
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+
+  .blog-excerpt {
+    color: #718096;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+}

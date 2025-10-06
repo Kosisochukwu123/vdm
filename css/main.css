@@ -1,0 +1,122 @@
+@import url(https://fonts.bunny.net/css?family=aleo:800);
+@import url(https://fonts.bunny.net/css?family=alegreya-sans:400);
+
+@import url(header.css);
+@import url(whoWeAre.css);
+@import url(events.css);
+@import url(contact.css);
+
+:root {
+  --primary-color: #052812;
+  --background-color: #fffaf1;
+  --header-font: "Aleo", serif;
+  --text-font: "Alegreya Sans", sans-serif;
+  --primary-padding: 0rem 1rem;
+  --heading-font-size: 12px;
+  --secondary-font-size: 30px;
+  /* --secondary-color: blue; */
+  /* --header-height: 100vh; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+span {
+  background-color: red;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+@media (max-width: 600px) {
+  footer {
+    max-width: 600px;
+    color: #ffffff;
+    padding: 40px 20px;
+    padding-top: 6rem;
+    text-align: center;
+    border-radius: 8px 8px 0px 0px;
+    background: linear-gradient(135deg, #1a2a6c, #052812, #fdbb2d);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+  }
+
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  footer h6 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  footer > div {
+    margin-bottom: 25px;
+  }
+
+  footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  footer > div:first-of-type p:first-child,
+  footer > div:nth-of-type(2) p:first-child {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    color: #aaa;
+    margin-bottom: 8px;
+  }
+
+  footer a {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    color: #007bff;
+    transform: translateY(-3px);
+  }
+
+  footer a i {
+    display: block;
+  }
+
+  footer > div:last-child {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+  }
+
+  footer > div:last-child p {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+  }
+
+}

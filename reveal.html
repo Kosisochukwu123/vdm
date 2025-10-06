@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Reveal Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+        }
+
+        .reveal-container {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .reveal-text {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            opacity: 0;
+            transform: translateY(100%);
+            animation: textReveal 1.5s forwards;
+            animation-delay: 0.5s;
+        }
+
+        .reveal-text:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .reveal-text:nth-child(3) {
+            animation-delay: 1.5s;
+        }
+
+        @keyframes textReveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-top: 30px;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 2s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(50px);
+            animation: cardReveal 1s forwards;
+        }
+
+        .card:nth-child(1) {
+            animation-delay: 2.2s;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 2.4s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 2.6s;
+        }
+
+        @keyframes cardReveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #fdbb2d;
+        }
+
+        .card p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: auto;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 3s;
+        }
+
+        @media (max-width: 768px) {
+            .reveal-text {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="reveal-container">
+                <h1 class="reveal-text">Welcome to Our</h1>
+                <h1 class="reveal-text">Creative Studio</h1>
+                <h1 class="reveal-text">Experience</h1>
+            </div>
+            <p class="subtitle">Where innovation meets design to create extraordinary digital experiences</p>
+        </header>
+
+        <main>
+            <div class="content">
+                <div class="card">
+                    <h3>Modern Design</h3>
+                    <p>Our team creates visually stunning interfaces that engage users and deliver exceptional experiences across all devices.</p>
+                </div>
+                <div class="card">
+                    <h3>Advanced Technology</h3>
+                    <p>We leverage cutting-edge technologies to build fast, secure, and scalable solutions for your business needs.</p>
+                </div>
+                <div class="card">
+                    <h3>User Focused</h3>
+                    <p>Every project begins with understanding your audience to create intuitive and accessible digital products.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Creative Studio. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Additional JavaScript to handle page load and scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add a slight delay to ensure all elements are rendered
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 100);
+        });
+    </script>
+</body>
+</html>
