@@ -1,6 +1,6 @@
 @media (max-width: 600px) {
   .events {
-    height: 90vh;
+    height: 100vh;
     margin-top: 1rem;
     background-color: var(--primary-color);
     padding: var(--primary-padding);

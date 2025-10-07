@@ -44,3 +44,11 @@ window.addEventListener("load", updateImageScale);
 
 // Initial update
 updateImageScale();
+
+// Additional JavaScript to handle page load and scroll animations
+document.addEventListener("DOMContentLoaded", function () {
+  // Add a slight delay to ensure all elements are rendered
+  setTimeout(() => {
+    document.body.classList.add("loaded");
+  }, 100);
+});

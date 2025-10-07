@@ -5,6 +5,7 @@
 @import url(whoWeAre.css);
 @import url(events.css);
 @import url(contact.css);
+@import url(nav.css);
 
 :root {
   --primary-color: #052812;
